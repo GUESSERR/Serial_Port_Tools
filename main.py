@@ -2,7 +2,7 @@ import json
 import sys
 from datetime import datetime
 from pathlib import Path
-import time
+
 from PyQt5.QtCore import QTimer, pyqtSignal, QObject, QThread
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                              QComboBox, QPushButton, QTextEdit, QLineEdit, QLabel,
@@ -378,7 +378,6 @@ class SerialTool(QMainWindow):
     def save_log(self, content):
         # 保存日志
         log_file = self.log_path / "serial.log"
-        from pathlib import Path
 
         file_path = log_file
         # 创建父目录（若不存在）
